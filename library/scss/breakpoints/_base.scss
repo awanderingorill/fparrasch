@@ -1,0 +1,93 @@
+h1 {
+	font-size: 1.5em;
+	font-weight: normal;
+	text-transform: lowercase;
+	.gray-text {
+		color: $gray;
+	}
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.8em;
+	color: $gray;
+
+	&:hover {
+		color: $black;
+	}
+}
+
+ul a {
+	line-height: 3em;
+}
+
+.header-wrapper {
+	padding: 1em 0em;
+	header {
+		padding: 1em 0em;
+		a {	
+			vertical-align: middle;
+		}
+		#logo {
+			text-transform: lowercase;
+			a {
+				font-size: 1.2em;
+			}
+		}
+		nav {
+			ul {
+				margin: 0px;
+				text-align: right;
+				font-size: 0.8em;
+				li {
+					display: inline-block;
+					padding-right: 1em;
+				}
+			}
+		}
+
+	}
+}
+
+#front-page {
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.columns {
+		float: none;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+.section {
+	.slideshow {
+		img {
+			width: 100%;
+		}
+
+		#right-arrow, #left-arrow {
+			cursor: pointer;
+		}
+
+		#left-arrow {
+			padding-right: 15px;
+		}
+	}
+
+	.side-menu {
+		a {
+			display: block;
+		}
+	}
+
+	.hidden {
+		// display: none;
+	}
+}
+
+footer {
+	text-align: center;
+}
