@@ -1135,95 +1135,101 @@ IMPORTING MODULES
 BASE (MOBILE) SIZE
 *********************/
 /* line 1, ../scss/breakpoints/_base.scss */
+p {
+  font-size: 0.8em;
+}
+
+/* line 5, ../scss/breakpoints/_base.scss */
 h1 {
   font-size: 1.5em;
   font-weight: normal;
   text-transform: lowercase;
 }
-/* line 5, ../scss/breakpoints/_base.scss */
-h1 .gray-text {
+
+/* line 11, ../scss/breakpoints/_base.scss */
+.gray-text {
   color: #848484;
 }
 
-/* line 10, ../scss/breakpoints/_base.scss */
+/* line 15, ../scss/breakpoints/_base.scss */
 a {
   text-decoration: none;
   font-size: 0.8em;
   color: #848484;
 }
-/* line 15, ../scss/breakpoints/_base.scss */
+/* line 20, ../scss/breakpoints/_base.scss */
 a:hover {
   color: #323944;
 }
 
-/* line 20, ../scss/breakpoints/_base.scss */
+/* line 25, ../scss/breakpoints/_base.scss */
 ul a {
   line-height: 3em;
 }
 
-/* line 24, ../scss/breakpoints/_base.scss */
+/* line 29, ../scss/breakpoints/_base.scss */
 .header-wrapper {
   padding: 1em 0em;
 }
-/* line 26, ../scss/breakpoints/_base.scss */
+/* line 31, ../scss/breakpoints/_base.scss */
 .header-wrapper header {
   padding: 1em 0em;
 }
-/* line 28, ../scss/breakpoints/_base.scss */
+/* line 33, ../scss/breakpoints/_base.scss */
 .header-wrapper header a {
   vertical-align: middle;
 }
-/* line 31, ../scss/breakpoints/_base.scss */
+/* line 36, ../scss/breakpoints/_base.scss */
 .header-wrapper header #logo {
   text-transform: lowercase;
 }
-/* line 33, ../scss/breakpoints/_base.scss */
+/* line 38, ../scss/breakpoints/_base.scss */
 .header-wrapper header #logo a {
   font-size: 1.2em;
 }
-/* line 38, ../scss/breakpoints/_base.scss */
+/* line 43, ../scss/breakpoints/_base.scss */
 .header-wrapper header nav ul {
   margin: 0px;
   text-align: right;
   font-size: 0.8em;
 }
-/* line 42, ../scss/breakpoints/_base.scss */
+/* line 47, ../scss/breakpoints/_base.scss */
 .header-wrapper header nav ul li {
   display: inline-block;
   padding-right: 1em;
 }
 
-/* line 53, ../scss/breakpoints/_base.scss */
+/* line 58, ../scss/breakpoints/_base.scss */
 #front-page img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 58, ../scss/breakpoints/_base.scss */
+/* line 63, ../scss/breakpoints/_base.scss */
 #front-page .columns {
   float: none;
   margin: 0 auto;
   display: block;
 }
 
-/* line 67, ../scss/breakpoints/_base.scss */
+/* line 72, ../scss/breakpoints/_base.scss */
 .section .slideshow img {
   width: 100%;
 }
-/* line 71, ../scss/breakpoints/_base.scss */
+/* line 76, ../scss/breakpoints/_base.scss */
 .section .slideshow #right-arrow, .section .slideshow #left-arrow {
   cursor: pointer;
 }
-/* line 75, ../scss/breakpoints/_base.scss */
+/* line 80, ../scss/breakpoints/_base.scss */
 .section .slideshow #left-arrow {
   padding-right: 15px;
 }
-/* line 81, ../scss/breakpoints/_base.scss */
+/* line 86, ../scss/breakpoints/_base.scss */
 .section .side-menu a {
   display: block;
 }
 
-/* line 91, ../scss/breakpoints/_base.scss */
+/* line 96, ../scss/breakpoints/_base.scss */
 footer {
   text-align: center;
 }

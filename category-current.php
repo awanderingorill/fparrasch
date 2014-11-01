@@ -1,72 +1,47 @@
 <?php get_header(); ?>
 
 <?php 
+	//get the current slug 
+	$slug = pods_v( 'last', 'url' );
 
-// call the pods
-$exhibition = pods( 'exhibition' ); 
-$exhibition->find( $params ); 
+	$params = array(
+		'where'=>"category.name = '$slug'"
+		);
 
+	//get pods object
+	$exhibition = pods( 'exhibition', $params );
 
-// find() 
-$params = array( 
-    'where'=>"category.name = 'current'" 
-); 
-
-// Run the find 
-$exhibition = pods( 'exhibition', $params ); 
-
-// Loop through the records returned 
-while ( $exhibition->fetch() ) { 
-
-
-    echo $exhibition->display( 'name' ) . "\n";
-    echo $exhibition->display('start_date') . "\n";
-    echo $exhibition->display('end_date') . "\n";
-
-}
-
+	// get data
+	$name = $exhibition->field( 'name' );
+	$start_date = $exhibition->field('start_date');
+	$end_date = $exhibition->field('end_date');
+	$artists = $exhibition->field('artists');
+	$pieces = $exhibition->field('pieces');
+	$press_release = $exhibition->field('press_release');
 ?>
 
 <div class="container">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-	<article id="post-<?php the_ID(); ?>">
+	<article>
 
 		<header class="sixteen columns">
 
-			<h1><?php the_title(); ?></h1>
+			<h1><?php echo $name ?> <span class="gray-text"><?php echo $artists ?></span></h1>
+			<p class="gray-text"><?php echo $start_date?> - <?php echo $end_date ?></p>
 
 		</header>
 
 		<div class="section">
 
-			<?php
-	      		//get the current slug 
-				$slug = pods_v( 'last', 'url' );
-
-	      		//get pods object
-				$artist = pods( 'artist', $slug );
-
-				// get data
-				$bio = $artist->field('bio');
-				$pieces = $artist->field('pieces');
-				$press = $artist->field('press');
-			?>
-
 			<!-- side menu -->
 			<div class="three columns side-menu">
 
-				<?php if (!empty($pieces)): ?>
+				<?php if ( !empty( $pieces ) ): ?>
 					<a href="#" id="pieces-link">images</a>
 				<?php endif ?>
 
-				<?php if (!empty($bio)): ?>
-					<a href="<?php echo $bio[guid] ?>" id="bio-link" target="new">bio</a>
-				<?php endif ?>
-
-				<?php if (!empty($press)): ?>
-					<a href="#" id="press-link">press</a>
+				<?php if ( !empty( $press_release ) ) : ?>
+					<a href="<?php echo $press_release[guid] ?>" id="bio-link" target="new">press release</a>
 				<?php endif ?>
 
 			</div>
@@ -106,29 +81,8 @@ while ( $exhibition->fetch() ) {
 			</div>
 
 		</div>
-
 	</article>
 
-<?php endwhile; ?>
-
-<?php else : ?>
-
-	<article id="post-not-found" class="hentry cf">
-		<header class="article-header">
-			<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-		</header>
-		<section class="entry-content">
-			<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-		</section>
-		<footer class="article-footer">
-			<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'bonestheme' ); ?></p>
-		</footer>
-	</article>
-<?php endif; ?>
-
-</div>
-
-</div>
 
 </div>
 
