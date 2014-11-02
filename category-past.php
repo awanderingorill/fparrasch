@@ -1,19 +1,35 @@
-<?php 
-
-// call the pods
-$exhibition = pods( 'exhibition' ); 
-$exhibition->find( $params ); 
+<?php get_header(); ?>
 
 
-// Here's how to use find() 
-$params = array( 
-    'where'=>"category.name = 'past'" 
-); 
+<div class="container">
 
-// Run the find 
-$exhibition = pods( 'exhibition', $params ); 
+	<header class="sixteen columns">
+		<h1>Past <span class="gray-text">Exhibitions</span></h1>
+	</header>
 
-// Loop through the records returned 
-while ( $exhibition->fetch() ) { 
-    echo $exhibition->display( 'name' ) . "\n"; 
-}
+	<?php 
+		$slug = pods_v( 'last', 'url' );
+
+	    $params = array( 
+	        'where'=> "category.name = '$slug'" ); 
+
+	    // Create and find in one shot 
+	    $exhibition = pods( 'exhibition', $params ); 
+
+	    if ( 0 < $exhibition->total() ) { 
+	        while ( $exhibition->fetch() ) { 
+	?> 
+
+	<div class="sixteen columns">			
+		<p>
+			<a href="<?php echo $exhibition->display( 'guid' ); ?>"><?php echo $exhibition->display( 'name' ); ?></a>
+		</p> 
+
+	</div>
+
+	<?php 
+	        } // end of exhibition loop 
+	    } // end of found exhibitions
+	?>
+
+</div>
