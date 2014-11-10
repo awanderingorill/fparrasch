@@ -1,18 +1,6 @@
 <?php get_header(); ?>
 
 
-<!-- <div id="slider">
-	<a href="#" class="control_next">>></a>
-	<a href="#" class="control_prev"><<</a>
-	<ul>
-		<li>SLIDE 1</li>
-		<li style="background: #aaa;">SLIDE 2</li>
-		<li>SLIDE 3</li>
-		<li style="background: #aaa;">SLIDE 4</li>
-	</ul>  
-</div> -->
-
-
 <div class="container">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -32,12 +20,12 @@
 				$slug = pods_v( 'last', 'url' );
 
 	      		//get pods object
-				$artist = pods( 'artist', $slug );
+				$art_fair = pods( 'art_fair', $slug );
 
 				// get data
-				$bio = $artist->field('bio');
-				$pieces = $artist->field('pieces');
-				$press = $artist->field('press');
+				$url = $art_fair->field('url');
+				$pieces = $art_fair->field('pieces');
+				$press = $art_fair->field('press');
 			?>
 
 			<!-- side menu -->
@@ -60,32 +48,26 @@
 			<!-- content -->
 
 			<div id="pieces">
-				<div id="slider">
-					<ul class="thirteen columns">
-					<?php foreach ($pieces as $piece): ?>
-							
-							<li>
-								<div class="ten columns piece-image">
-									<img src="<?php echo $piece[guid]; ?>">
-								</div>
-								<div class="two columns piece-caption">
-									<div class="arrows">
-										<a href="#" class="control_prev">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a href="#" class="control_next">
-											<i class="fa fa-angle-right" class="control_next"></i>
-										</a>
-									</div>
-									<?php echo $piece[post_excerpt]; ?>
-								</div>
-							</li>
+				<?php foreach ($pieces as $piece): ?>
+					<div class="slideshow">
+						
+						<div class="ten columns piece-image">
 
-					<? endforeach; ?>
-					</ul>
-				</div>
+							<img src="<?php echo $piece[guid]; ?>">
+
+						</div>
+						<div class="three columns piece-caption">
+
+							<i class="fa fa-angle-left" id="left-arrow"></i> <i class="fa fa-angle-right" id="right-arrow"></i>
+
+							<p>
+								<?php echo $piece[post_excerpt]; ?>
+							</p>
+
+						</div>
+					</div>
+				<? endforeach; ?>
 			</div>
-	</div>
 
 			<div id="press" class="ten columns">
 

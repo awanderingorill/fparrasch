@@ -1128,6 +1128,63 @@ width: calc-percent(650px, 1000px);
 both compile to:
 width: 65%;
 *********************/
+/* line 1, ../scss/partials/_slider.scss */
+#slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, ../scss/partials/_slider.scss */
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  list-style: none;
+}
+
+/* line 14, ../scss/partials/_slider.scss */
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+  max-height: 100%;
+}
+/* line 23, ../scss/partials/_slider.scss */
+#slider ul li img {
+  width: 100%;
+}
+
+/* line 29, ../scss/partials/_slider.scss */
+.arrows {
+  display: block;
+}
+
+/* line 33, ../scss/partials/_slider.scss */
+a.control_prev, a.control_next {
+  z-index: 999;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  color: #323944;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* line 46, ../scss/partials/_slider.scss */
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
 /*********************
 IMPORTING MODULES
 *********************/
@@ -1212,24 +1269,17 @@ ul a {
   display: block;
 }
 
-/* line 72, ../scss/breakpoints/_base.scss */
-.section .slideshow img {
-  width: 100%;
+/* line 70, ../scss/breakpoints/_base.scss */
+.piece-caption {
+  font-size: 0.8em;
 }
-/* line 76, ../scss/breakpoints/_base.scss */
-.section .slideshow #right-arrow, .section .slideshow #left-arrow {
-  cursor: pointer;
-}
-/* line 80, ../scss/breakpoints/_base.scss */
-.section .slideshow #left-arrow {
-  padding-right: 15px;
-}
-/* line 86, ../scss/breakpoints/_base.scss */
-.section .side-menu a {
+
+/* line 74, ../scss/breakpoints/_base.scss */
+.side-menu a {
   display: block;
 }
 
-/* line 96, ../scss/breakpoints/_base.scss */
+/* line 78, ../scss/breakpoints/_base.scss */
 footer {
   text-align: center;
 }

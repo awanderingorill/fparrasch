@@ -67,30 +67,12 @@ ul a {
 	}
 }
 
-.section {
-	.slideshow {
-		img {
-			width: 100%;
-		}
+.piece-caption {
+	font-size: 0.8em;
+}
 
-		#right-arrow, #left-arrow {
-			cursor: pointer;
-		}
-
-		#left-arrow {
-			padding-right: 15px;
-		}
-	}
-
-	.side-menu {
-		a {
-			display: block;
-		}
-	}
-
-	.hidden {
-		// display: none;
-	}
+.side-menu a {
+	display: block;
 }
 
 footer {
