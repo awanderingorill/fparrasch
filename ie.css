@@ -21,62 +21,6 @@ import the mixins file so SASS can understand the variables.
 Site Name:
 Author:
 
-Stylesheet: Mixins Stylesheet
-
-This is where you can take advantage of Sass' great features: Mixins.
-I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques gradients.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
-
-Helpful:
-http://sachagreif.com/useful-sass-mixins/
-http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
-http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
-
-******************************************************************/
-/*********************
-TRANSITION
-*********************/
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include transition(all 0.2s ease-in-out);
-*/
-/*********************
-CSS3 GRADIENTS
-Be careful with these since they can
-really slow down your CSS. Don't overdo it.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
-/*********************
-BOX SIZING
-*********************/
-/* @include box-sizing(border-box); */
-/* NOTE: value of "padding-box" is only supported in Gecko. So
-probably best not to use it. I mean, were you going to anyway? */
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: IE Grid Styles
-
-Since the example grid is based on media queries, so rather than
-setup some js library that would make IE8 and below understand
-media queries, let's just add some styles that serves a fixed grid.
-
-Again, if you want to roll your own, just remove this junk and put
-whatever you use in here.
-
-******************************************************************/
-/******************************************************************
-Site Name:
-Author:
-
 Stylesheet: 481px and Up Stylesheet
 
 This stylesheet is loaded for larger devices. It's set to
@@ -99,19 +43,23 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
 /* .menu is clearfixed inside mixins.scss */
+/* line 33, library/scss/breakpoints/_481up.scss */
 .menu {
   /* end .menu ul */
 }
+/* line 34, library/scss/breakpoints/_481up.scss */
 .menu ul {
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
+/* line 35, library/scss/breakpoints/_481up.scss */
 .menu ul li {
   /*
   plan your menus and drop-downs wisely.
   */
 }
+/* line 36, library/scss/breakpoints/_481up.scss */
 .menu ul li a {
   /*
   you can use hover styles here even though this size
@@ -124,19 +72,23 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
+/* line 81, library/scss/breakpoints/_481up.scss */
 .entry-content {
   /* at this larger size, we can start to align images */
 }
+/* line 85, library/scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
+/* line 90, library/scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
+/* line 95, library/scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -172,6 +124,7 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+/* line 26, library/scss/breakpoints/_768up.scss */
 .wrap {
   width: 760px;
 }
@@ -182,16 +135,19 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+/* line 42, library/scss/breakpoints/_768up.scss */
 .nav {
   border: 0;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
+/* line 44, library/scss/breakpoints/_768up.scss */
 .nav ul {
   background: #323944;
   margin-top: 0;
 }
+/* line 48, library/scss/breakpoints/_768up.scss */
 .nav li {
   float: left;
   position: relative;
@@ -200,6 +156,7 @@ NAVIGATION STYLES
   */
   /* showing sub-menus */
 }
+/* line 52, library/scss/breakpoints/_768up.scss */
 .nav li a {
   border-bottom: 0;
   /*
@@ -207,10 +164,12 @@ NAVIGATION STYLES
   has the possibility of being a mobile device.
   */
 }
+/* line 59, library/scss/breakpoints/_768up.scss */
 .nav li a:hover, .nav li a:focus {
   color: white;
   text-decoration: underline;
 }
+/* line 72, library/scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -221,6 +180,7 @@ NAVIGATION STYLES
   z-index: 8999;
   /* highlight sub-menu current page */
 }
+/* line 80, library/scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -229,6 +189,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
+/* line 82, library/scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 10px;
@@ -237,15 +198,18 @@ NAVIGATION STYLES
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
+/* line 99, library/scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
+/* line 109, library/scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li ul,
 .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
+/* line 124, library/scss/breakpoints/_768up.scss */
 .nav li:hover > ul {
   top: auto;
   visibility: visible;
@@ -255,23 +219,28 @@ NAVIGATION STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+/* line 144, library/scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
+/* line 148, library/scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
+/* line 153, library/scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
+/* line 158, library/scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
+/* line 166, library/scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -296,6 +265,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+/* line 274, library/scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -315,6 +285,7 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
+/* line 12, library/scss/breakpoints/_1030up.scss */
 .wrap {
   width: 1040px;
 }

@@ -43,41 +43,35 @@
 				<?php if ( !empty( $press_release ) ) : ?>
 					<a href="<?php echo $press_release[guid] ?>" id="bio-link" target="new">press release</a>
 				<?php endif ?>
-
 			</div>
 			
 			<!-- content -->
 
 			<div id="pieces">
-				<?php foreach ($pieces as $piece): ?>
-					<div class="slideshow">
-						
-						<div class="ten columns piece-image">
+				<div id="slider">
+					<ul class="thirteen columns">
+					<?php foreach ($pieces as $piece): ?>
+							
+							<li>
+								<div class="ten columns piece-image">
+									<img src="<?php echo $piece[guid]; ?>">
+								</div>
+								<div class="two columns piece-caption">
+									<div class="arrows">
+										<a href="#" class="control_prev">
+											<i class="fa fa-angle-left"></i>
+										</a>
+										<a href="#" class="control_next">
+											<i class="fa fa-angle-right" class="control_next"></i>
+										</a>
+									</div>
+									<?php echo $piece[post_excerpt]; ?>
+								</div>
+							</li>
 
-							<img src="<?php echo $piece[guid]; ?>">
-
-						</div>
-						<div class="three columns piece-caption">
-
-							<i class="fa fa-angle-left" id="left-arrow"></i> <i class="fa fa-angle-right" id="right-arrow"></i>
-
-							<p>
-								<?php echo $piece[post_excerpt]; ?>
-							</p>
-
-						</div>
-					</div>
-				<? endforeach; ?>
-			</div>
-
-			<div id="press" class="ten columns">
-
-				<?php foreach ($press as $article): ?>
-
-					<a href="<?php echo $article[guid] ?>"><?php echo $article[post_title] ?></a>
-
-				<?php endforeach; ?>
-
+					<? endforeach; ?>
+					</ul>
+				</div>
 			</div>
 
 		</div>

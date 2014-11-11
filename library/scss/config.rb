@@ -9,7 +9,7 @@
 http_path = "/"
 
 # 2. probably don't need to touch these
-css_dir = "../css"
+css_dir = "../../"
 sass_dir = "./"
 images_dir = "../images"
 javascripts_dir = "../js"
@@ -28,3 +28,11 @@ output_style = :expanded
 
 # don't touch this
 preferred_syntax = :scss
+
+# require 'fileutils'
+# on_stylesheet_saved do |file|
+#   if File.exists?(file) && File.basename(file) == "style.css"
+#     puts "Moving: #{file}"
+#     FileUtils.mv(file, File.dirname(file) + "/../../" + File.basename(file))
+#   end
+# end
