@@ -47,30 +47,31 @@
 			<!-- content -->
 
 			<div id="pieces">
-				<div id="slider">
-					<ul class="thirteen columns">
-					<?php foreach ($pieces as $piece): ?>
-							
-							<li>
-								<div class="ten columns piece-image">
-									<img src="<?php echo $piece[guid]; ?>">
-								</div>
-								<div class="two columns piece-caption">
-									<div class="arrows">
-										<a href="#" class="control_prev">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a href="#" class="control_next">
-											<i class="fa fa-angle-right" class="control_next"></i>
-										</a>
+				<?php if (count($pieces) > 1): ?>
+					<div id="slider">
+						<ul class="thirteen columns">
+						<?php foreach ($pieces as $piece): ?>
+								
+								<li>
+									<div class="ten columns piece-image">
+										<img src="<?php echo $piece[guid]; ?>">
 									</div>
-									<?php echo $piece[post_excerpt]; ?>
-								</div>
-							</li>
-
-					<? endforeach; ?>
-					</ul>
-				</div>
+									<div class="two columns piece-caption">
+										<div class="arrows">
+											<a href="#" class="control_prev">
+												<i class="fa fa-angle-left"></i>
+											</a>
+											<a href="#" class="control_next">
+												<i class="fa fa-angle-right" class="control_next"></i>
+											</a>
+										</div>
+										<?php echo $piece[post_excerpt]; ?>
+									</div>
+								</li>
+						<? endforeach; ?>
+						</ul>
+					</div>
+				<?php endif; ?>
 			</div>
 	</div>
 
