@@ -1201,96 +1201,104 @@ IMPORTING MODULES
 BASE (MOBILE) SIZE
 *********************/
 /* line 1, library/scss/breakpoints/_base.scss */
+body {
+  letter-spacing: 0.2em;
+}
+
+/* line 5, library/scss/breakpoints/_base.scss */
 p {
   font-size: 0.8em;
 }
 
-/* line 5, library/scss/breakpoints/_base.scss */
+/* line 9, library/scss/breakpoints/_base.scss */
 h1 {
   font-size: 1.5em;
   font-weight: normal;
   text-transform: lowercase;
 }
 
-/* line 11, library/scss/breakpoints/_base.scss */
+/* line 15, library/scss/breakpoints/_base.scss */
 .gray-text {
   color: #848484;
 }
 
-/* line 15, library/scss/breakpoints/_base.scss */
+/* line 19, library/scss/breakpoints/_base.scss */
 a {
   text-decoration: none;
   font-size: 0.8em;
   color: #848484;
 }
-/* line 20, library/scss/breakpoints/_base.scss */
+/* line 24, library/scss/breakpoints/_base.scss */
 a:hover {
   color: #323944;
 }
 
-/* line 25, library/scss/breakpoints/_base.scss */
+/* line 29, library/scss/breakpoints/_base.scss */
 ul a {
   line-height: 3em;
 }
 
-/* line 29, library/scss/breakpoints/_base.scss */
+/* line 33, library/scss/breakpoints/_base.scss */
 .header-wrapper {
   padding: 1em 0em;
 }
-/* line 31, library/scss/breakpoints/_base.scss */
+/* line 35, library/scss/breakpoints/_base.scss */
 .header-wrapper header {
   padding: 1em 0em;
 }
-/* line 33, library/scss/breakpoints/_base.scss */
+/* line 37, library/scss/breakpoints/_base.scss */
 .header-wrapper header a {
   vertical-align: middle;
 }
-/* line 36, library/scss/breakpoints/_base.scss */
+/* line 40, library/scss/breakpoints/_base.scss */
 .header-wrapper header #logo {
   text-transform: lowercase;
 }
-/* line 38, library/scss/breakpoints/_base.scss */
+/* line 42, library/scss/breakpoints/_base.scss */
 .header-wrapper header #logo a {
   font-size: 1.2em;
 }
-/* line 43, library/scss/breakpoints/_base.scss */
+/* line 47, library/scss/breakpoints/_base.scss */
 .header-wrapper header nav ul {
   margin: 0px;
   text-align: right;
   font-size: 0.8em;
 }
-/* line 47, library/scss/breakpoints/_base.scss */
+/* line 51, library/scss/breakpoints/_base.scss */
 .header-wrapper header nav ul li {
   display: inline-block;
   padding-right: 1em;
 }
 
-/* line 58, library/scss/breakpoints/_base.scss */
+/* line 62, library/scss/breakpoints/_base.scss */
 #front-page img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 63, library/scss/breakpoints/_base.scss */
+/* line 67, library/scss/breakpoints/_base.scss */
 #front-page .columns {
   float: none;
   margin: 0 auto;
   display: block;
 }
 
-/* line 70, library/scss/breakpoints/_base.scss */
+/* line 74, library/scss/breakpoints/_base.scss */
 .piece-caption {
   font-size: 0.8em;
 }
 
-/* line 74, library/scss/breakpoints/_base.scss */
+/* line 78, library/scss/breakpoints/_base.scss */
 .side-menu a {
   display: block;
 }
 
-/* line 78, library/scss/breakpoints/_base.scss */
+/* line 82, library/scss/breakpoints/_base.scss */
 footer {
   text-align: center;
+  text-transform: lowercase;
+  padding-top: 2em;
+  color: #848484;
 }
 
 /*********************
