@@ -36,6 +36,10 @@
   padding: 10px;
 }
 
+#slider .arrows {
+  display: none;
+}
+
 a.control_prev, a.control_next {
   z-index: 999;
   display: inline-block;

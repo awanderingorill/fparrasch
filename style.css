@@ -1180,6 +1180,11 @@ width: 65%;
 }
 
 /* line 39, library/scss/partials/_slider.scss */
+#slider .arrows {
+  display: none;
+}
+
+/* line 43, library/scss/partials/_slider.scss */
 a.control_prev, a.control_next {
   z-index: 999;
   display: inline-block;
@@ -1193,7 +1198,7 @@ a.control_prev, a.control_next {
   cursor: pointer;
 }
 
-/* line 52, library/scss/partials/_slider.scss */
+/* line 56, library/scss/partials/_slider.scss */
 .slider_option {
   position: relative;
   margin: 10px auto;
