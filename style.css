@@ -1137,42 +1137,49 @@ width: calc-percent(650px, 1000px);
 both compile to:
 width: 65%;
 *********************/
-/* line 1, library/scss/partials/_slider.scss */
-#slider {
-  position: relative;
-  overflow: hidden;
-}
+@media screen and (min-width: 400px) {
+  /* line 2, library/scss/partials/_slider.scss */
+  #slider {
+    position: relative;
+    overflow: hidden;
+  }
 
-/* line 6, library/scss/partials/_slider.scss */
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  max-height: 100%;
-  list-style: none;
-}
+  /* line 7, library/scss/partials/_slider.scss */
+  #slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+    list-style: none;
+  }
 
-/* line 14, library/scss/partials/_slider.scss */
-#slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  max-width: 760px;
-  max-height: 100%;
+  /* line 15, library/scss/partials/_slider.scss */
+  #slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    max-width: 760px;
+    max-height: 100%;
+  }
+  /* line 24, library/scss/partials/_slider.scss */
+  #slider ul li img {
+    width: 100%;
+  }
+
+  /* line 29, library/scss/partials/_slider.scss */
+  .arrows {
+    display: block;
+  }
 }
-/* line 23, library/scss/partials/_slider.scss */
-#slider ul li img {
+/* line 34, library/scss/partials/_slider.scss */
+#slider img {
   width: 100%;
+  padding: 10px;
 }
 
-/* line 29, library/scss/partials/_slider.scss */
-.arrows {
-  display: block;
-}
-
-/* line 33, library/scss/partials/_slider.scss */
+/* line 39, library/scss/partials/_slider.scss */
 a.control_prev, a.control_next {
   z-index: 999;
   display: inline-block;
@@ -1186,7 +1193,7 @@ a.control_prev, a.control_next {
   cursor: pointer;
 }
 
-/* line 46, library/scss/partials/_slider.scss */
+/* line 52, library/scss/partials/_slider.scss */
 .slider_option {
   position: relative;
   margin: 10px auto;
